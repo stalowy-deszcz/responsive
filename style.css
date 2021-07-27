@@ -1,0 +1,56 @@
+/* font-family: 'Baloo 2', cursive;
+font-family: 'Cormorant Garamond', serif; */
+
+:root {
+    --clr-light-900: #1515b6;
+    --clr-light-400: rgb(105, 94, 255);
+    --clr-light-100: #bbf;    
+
+    --clr-dark-900: rgb(126, 0, 0);
+    --clr-dark-400: rgb(255, 115, 115);
+    --clr-dark-100: rgb(253, 158, 158);
+
+
+    --ff-secondary: 'Baloo 2', cursive;
+    --ff-primary: 'Cormorant Garamond', serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin:0;
+}
+
+.bg-light {
+    background-color: var(--clr-light-400);
+}
+
+.bg-dark {
+    background-color: var(--clr-dark-900);
+}
+
+.clr-dark {
+    color:var(--clr-dark-900);
+}
+
+.clr-light {
+    color: var(--clr-light-100);
+}
+
+h1 {
+    font-family: var(--ff-secondary);
+}
+
+/*primary font wont work :( */
+p {
+    font-family: var(--ff-primary);
+    font-weight: 300;
+}
