@@ -29,8 +29,56 @@ p {
     margin:0;
 }
 
+body {
+    font-family: var(--ff-primary);
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+h2 {
+    font-family: var(--ff-secondary);
+    line-height: 1;
+    font-weight: 900;
+    text-align: center;
+}
+h1,
+h2,
+h3,
+p,
+img {
+    margin-bottom: 1em;
+}
+
+header,
+section {
+    padding: 2rem 0;
+}
+@media (min-width: 40em) {
+    header,
+    section {
+        padding: 5rem 0;
+    }
+}
+
+img {  
+    max-width:100%;
+}
+
+.container {
+    margin: 0 auto;
+    width: min(90%, 60rem);
+}
+.container--narrow {
+    max-width: 20rem;
+}
+
+.text-center {
+    text-align:center;
+}
+
 .bg-light {
-    background-color: var(--clr-light-400);
+    background-color: var(--clr-light-100);
 }
 
 .bg-dark {
@@ -45,12 +93,28 @@ p {
     color: var(--clr-light-100);
 }
 
-h1 {
-    font-family: var(--ff-secondary);
+
+.flex {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 40em) {
+    .flex {
+        flex-direction: row;
+    }
+    .flex > * {
+        flex-basis:100%;
+    }
+
+    /* every element with a sibling before it
+     (skoro mam dwa divy, to ten, co po lewej
+      ma taki sam element (div), to dostanie 
+      regułę:) */
+    .flex > * + * {
+        margin-left: 1em;
+    }
 }
 
-/*primary font wont work :( */
-p {
-    font-family: var(--ff-primary);
-    font-weight: 300;
+.item-center {
+    text-align: center;
 }
